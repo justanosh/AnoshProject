@@ -1,0 +1,17 @@
+<div class="posts">
+  <% @posts.each do |post| %>
+      <div class="posts__item">
+        <div class="item__title">
+          <%= post.title %>
+        </div>
+
+        <div class="item__body">
+          <%= post.body %>
+        </div>
+
+        <div class="item__timestamp">
+          <%= post.created_at %> by <%= post.user.credentials %>
+        </div>
+      </div>
+  <% end %>
+</div>

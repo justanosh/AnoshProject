@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password:
+  host: localhost
+
+development:
+  <<: *default
+  database: AnoshProject_development
+
+test:
+  <<: *default
+  database: AnoshProject_test
+
+production:
+  <<: *default
+  database: AnoshProject_production
+  username: AnoshProject
+  password: <%= ENV['ANOSHPROJECT_DATABASE_PASSWORD'] %>
