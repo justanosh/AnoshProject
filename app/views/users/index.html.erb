@@ -1,0 +1,12 @@
+<div class="users">
+  <% @users.each do |user| %>
+      <div class="users__item">
+        <div class="item__name">
+          <strong> <%= user.credentials %> </strong>
+        </div>
+        <div class="item__email">
+          <%= user.email %>
+        </div>
+      </div>
+  <% end %>
+</div>
